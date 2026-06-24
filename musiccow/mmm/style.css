@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #03dac6;
+    --secondary-color: #bb86fc;
+    --text-color: #e0e0e0;
+    --error-color: #cf6679;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 { margin: 0; font-weight: 300; letter-spacing: 1px; }
+h2 { margin: 5px 0 0; font-size: 1rem; color: var(--secondary-color); opacity: 0.8; }
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.controls {
+    text-align: center;
+}
+
+#status-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Controls */
+#start-btn {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s;
+}
+#start-btn:hover { transform: scale(1.05); }
+#start-btn:active { transform: scale(0.95); }
+#start-btn.running { background-color: var(--error-color); color: white; }
+
+/* Main Display */
+.display-primary {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    min-height: 1.2em;
+}
+
+.chord-text {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.display-secondary {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* Tuning Meter */
+.meter-container {
+    position: relative;
+    height: 40px;
+    background: #333;
+    border-radius: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+    z-index: 2;
+}
+.needle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--primary-color);
+    left: 50%;
+    transition: left 0.1s ease-out;
+    box-shadow: 0 0 10px var(--primary-color);
+    z-index: 1;
+}
+.cents-text {
+    margin-top: 5px;
+    font-family: monospace;
+    color: var(--secondary-color);
+}
+
+/* Visualizer */
+canvas {
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
