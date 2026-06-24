@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wizard RPG Battle</title>
+    <link rel="stylesheet" href="styles.css?v=2031">
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="battle" width="1600" height="900" aria-label="RPG battle scene"></canvas>
+
+      <section class="hud" aria-label="Battle interface">
+        <div class="brand-lockup">
+          <span class="brand-mark"></span>
+          <span>ARCANE 2030</span>
+        </div>
+
+        <div class="boss-panel">
+          <div class="boss-title">
+            <span class="boss-kicker">BOSS ENCOUNTER</span>
+            <span class="boss-name">Obsidian Beast</span>
+            <strong id="hpText">1000 / 1000 HP</strong>
+          </div>
+          <div class="hp-track">
+            <div class="hp-fill" id="hpFill"></div>
+            <div class="hp-shine"></div>
+          </div>
+        </div>
+
+        <div class="spellbar" id="spellbar">
+          <button data-spell="1">
+            <kbd>1</kbd>
+            <span class="spell-icon"></span>
+            <span class="spell-copy"><span class="spell-name">Fire Comet</span><span class="spell-meta">Em · 120 DMG</span></span>
+          </button>
+          <button data-spell="2">
+            <kbd>2</kbd>
+            <span class="spell-icon"></span>
+            <span class="spell-copy"><span class="spell-name">Frost Seal</span><span class="spell-meta">Am · 95 DMG</span></span>
+          </button>
+          <button data-spell="3">
+            <kbd>3</kbd>
+            <span class="spell-icon"></span>
+            <span class="spell-copy"><span class="spell-name">Storm Rift</span><span class="spell-meta">D · 145 DMG</span></span>
+          </button>
+          <button data-spell="4">
+            <kbd>4</kbd>
+            <span class="spell-icon"></span>
+            <span class="spell-copy"><span class="spell-name">Shadow Blades</span><span class="spell-meta">G · 110 DMG</span></span>
+          </button>
+          <button data-spell="5">
+            <kbd>5</kbd>
+            <span class="spell-icon"></span>
+            <span class="spell-copy"><span class="spell-name">Solar Ray</span><span class="spell-meta">C · 210 DMG</span></span>
+          </button>
+        </div>
+
+        <div class="magic-input" aria-label="Chord spell input">
+          <button class="mic-toggle" id="micToggle" type="button">Enable chords</button>
+          <div class="chord-readout">
+            <span id="chordNow">--</span>
+            <small id="chordHint">Em · Am · D · G · C</small>
+          </div>
+          <div class="cooldown" aria-label="Spell cooldown">
+            <span class="cooldown-fill" id="cooldownFill"></span>
+          </div>
+        </div>
+
+        <div class="status" id="status">Press 1-5 or play Em, Am, D, G, C.</div>
+        <button class="restart" id="restart" type="button">New battle</button>
+      </section>
+    </main>
+
+    <script src="game.js?v=20"></script>
+  </body>
+</html>
