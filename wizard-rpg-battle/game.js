@@ -37,9 +37,9 @@ const spellCooldownMs = 2000;
 const chordConfirmationFrames = 4;
 const chordReleaseMs = 260;
 const chordConfidenceThresholds = {
-  Em: 0.4,
+  Em: 0.35,
   Am: 0.6,
-  D: 0.58,
+  D: 0.52,
   G: 0.45,
   C: 0.51
 };
