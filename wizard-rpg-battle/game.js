@@ -38,7 +38,7 @@ const chordConfirmationFrames = 4;
 const chordReleaseMs = 260;
 const chordConfidenceThresholds = {
   Em: 0.4,
-  Am: 0.7,
+  Am: 0.6,
   D: 0.58,
   G: 0.45,
   C: 0.6
