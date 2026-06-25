@@ -41,7 +41,7 @@ const chordConfidenceThresholds = {
   Am: 0.6,
   D: 0.58,
   G: 0.45,
-  C: 0.6
+  C: 0.51
 };
 const calibrationMs = 1500;
 const noiseFloorAlpha = 0.995;
